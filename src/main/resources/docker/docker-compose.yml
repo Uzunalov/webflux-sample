@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  postgres:
+    container_name: postgres_webflux
+    image: postgres:15.3
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=webflux
+    ports:
+      - "5435:5432"

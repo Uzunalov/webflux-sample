@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: "20231222"
+      author: Hasan Uzunalov
+      changes:
+        - sqlFile:
+            path: db/changelog/sql/create_all_schemas.sql

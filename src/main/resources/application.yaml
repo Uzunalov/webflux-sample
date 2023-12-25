@@ -1,0 +1,16 @@
+spring:
+  docker:
+    compose:
+      file: classpath:/docker/docker-compose.yml
+
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+    enabled: true
+    show-summary-output: console
+    url: jdbc:postgresql://localhost:5435/webflux
+    user: postgres
+    password: password
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5435/webflux
+    username: postgres
+    password: password
